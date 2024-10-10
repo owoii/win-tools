@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+  <link href="./styles/global.css" rel="stylesheet">
+  <title>Win Tools</title>
+</head>
+
+<body class="p-2">
+  <nav class="mb-4">
+
+    <h1 class="inline-flex items-center text-xl gap-2 text-blue-500 font-bold">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+          color="currentColor">
+          <path
+            d="m12 5.889l6.111 3.333L12 12.555L5.889 9.222zm-6.667 9.445v1.999c0 1.147.205 1.505 1.229 2.027l4.444 2.267c.976.498 1.012.498 1.988 0l4.444-2.267c1.024-.522 1.229-.88 1.229-2.027v-2" />
+          <path
+            d="M14.596 3.29L12 5.636L9.404 3.289C8.488 2.462 8.03 2.048 7.47 2.004s-1.073.293-2.1.968L3.514 4.194c-.996.655-1.494.983-1.512 1.47s.454.853 1.399 1.585l2.416 1.873L3.4 10.995c-.945.732-1.418 1.098-1.4 1.585s.517.815 1.513 1.47l2.853 1.876c.548.36.821.54 1.12.516c.298-.023.542-.244 1.03-.685L12 12.607l2.596 2.348c.916.827 1.373 1.241 1.933 1.285s1.073-.293 2.1-.968l1.857-1.222c.997-.655 1.495-.983 1.514-1.47s-.455-.853-1.4-1.585l-2.416-1.873L20.6 7.249c.945-.732 1.418-1.098 1.4-1.585s-.517-.815-1.514-1.47l-1.858-1.222c-1.026-.675-1.54-1.012-2.099-.968s-1.017.458-1.933 1.285" />
+        </g>
+      </svg>
+      <span>Win Tools</span>
+    </h1>
+  </nav>
+
+
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+    <div class="rounded-md overflow-hidden flex flex-col gap-2 bg-white border hover:border-green-500">
+      <header class="border-b p-2 flex items-center">
+        <b class="inline-flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              color="currentColor">
+              <path
+                d="M7 7h.009m5.982 0H13m4.991 7.5H18m-4 0h.009M10 16c0 2.761 2.686 5 6 5c.907 0 1.767-.168 2.538-.468c.189-.073.393-.1.592-.063L22 21l-.652-2.03a1.13 1.13 0 0 1 .11-.89A4.3 4.3 0 0 0 22 16c0-2.761-2.686-5-6-5s-6 2.239-6 5" />
+              <path
+                d="M17.873 11.249Q18 10.639 18 10c0-3.866-3.582-7-8-7s-8 3.134-8 7c0 1.112.297 2.164.824 3.098c.147.26.196.567.108.853L2 17l3.914-.76c.208-.041.422-.013.617.07a9 9 0 0 0 3.589.69" />
+            </g>
+          </svg>
+          <span>微信多开</span>
+        </b>
+      </header>
+      <div class="p-2 flex flex-col gap-2">
+        <button id="wechat-path-chooser"
+          class="inline-flex gap-2 rounded-lg justify-center items-center h-12 bg-green-500 text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              color="currentColor">
+              <path
+                d="M11.57 21h-1.063c-4.01 0-6.015 0-7.261-1.546S2 15.42 2 10.444V7.22c0-1.917 0-2.876.324-3.595a2.94 2.94 0 0 1 .984-1.223C3.888 2 4.661 2 6.206 2c.99 0 1.485 0 1.918.202c.99.46 1.398 1.575 1.844 2.683l.539 1.337m-3.503 0h8.545c1.792 0 2.688 0 3.332.534c.278.23.518.528.704.874c.29.538.384 1.219.415 2.287" />
+              <path
+                d="M4.596 12.576c.43-1.15.647-1.724 1.067-2.085c.68-.582 1.657-.485 2.494-.485h9.095c2.477 0 3.716 0 4.334.797c1.06 1.368-.191 3.587-.695 4.93c-.904 2.408-1.356 3.612-2.256 4.346c-1.371 1.119-3.366.904-5.021.904H9.937c-3.543 0-5.314 0-6.236-1.096c-1.7-2.025.13-5.274.895-7.312" />
+            </g>
+          </svg>
+          <span>选择微信安装位置</span>
+        </button>
+        <div class="border p-2 rounded-lg flex-col flex gap-2">
+          <label for="wechat-num">请输入要多开的数量:</label>
+          <input id="wechat-num" type="number" maxlength="50" value="2"
+            class="border text-lg border-green-500 rounded-lg p-2" />
+        </div>
+        <button class="inline-flex items-center p-2 justify-center gap-2 bg-gray-50 border rounded-lg" type="button"
+          id="wechat-open-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              color="currentColor">
+              <path
+                d="M7 7h.009m5.982 0H13m4.991 7.5H18m-4 0h.009M10 16c0 2.761 2.686 5 6 5c.907 0 1.767-.168 2.538-.468c.189-.073.393-.1.592-.063L22 21l-.652-2.03a1.13 1.13 0 0 1 .11-.89A4.3 4.3 0 0 0 22 16c0-2.761-2.686-5-6-5s-6 2.239-6 5" />
+              <path
+                d="M17.873 11.249Q18 10.639 18 10c0-3.866-3.582-7-8-7s-8 3.134-8 7c0 1.112.297 2.164.824 3.098c.147.26.196.567.108.853L2 17l3.914-.76c.208-.041.422-.013.617.07a9 9 0 0 0 3.589.69" />
+            </g>
+          </svg>
+          <span>多开微信</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./renderer.js"></script>
+</body>
+
+</html>
