@@ -33,6 +33,6 @@
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.1",
-    "tailwindcss": "^3.4.13"
+    "tailwindcss": "^3.4.14"
   }
 }
